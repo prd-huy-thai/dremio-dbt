@@ -25,8 +25,8 @@ Ensure you have the following software installed on your system:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/prd-huy-thai/dremio-dbt
-   cd dremio-dbt
+   git clone https://github.com/prd-huy-thai/dremio_demo.git
+   cd dremio_demo
    ```
 2. Install dependencies:
    ```bash
