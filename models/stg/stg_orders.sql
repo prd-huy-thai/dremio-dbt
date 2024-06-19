@@ -1,4 +1,4 @@
-{{ config(materialized='table', database='nessie', schema='stg') }}
+{{ config(materialized='table', database='Nessie', schema='stg') }}
 
 
 with source as (

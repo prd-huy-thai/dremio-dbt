@@ -8,9 +8,9 @@ text_generator = Text(Locale.EN, seed=0xff)
 
 ORDER_STATUS = ['placed', 'shipped', 'completed', 'returned', 'return_pending']
 PAYMENT_METHODS= ['credit_card', 'bank_transfer', 'coupon', 'gift_card']
-TOTAL_CUSTOMER = 1000000
-TOTAL_ORDERS = 10000000
-TOTAL_PAYMENTS = 1000000
+TOTAL_CUSTOMER = 100000
+TOTAL_ORDERS = 100000
+TOTAL_PAYMENTS = 100000
 
 
 customer_schema = lambda: {

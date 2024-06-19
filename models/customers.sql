@@ -1,4 +1,4 @@
-{{ config(database='nessie', schema='dimension') }}
+{{ config(database='Nessie', schema='dimension') }}
 
 with customers as (
 

@@ -8,6 +8,7 @@ This guide provides instructions for running dbt (Data Build Tool) on Dremio
     - Setting Up Docker Compose
     - Install dependencies
     - Generating Fake Data
+    - Setup dremio with data source
 3. [Running dbt on Dremio](#running-dbt-on-dremio)
 4. [Additional Information](#additional-information)
 
@@ -37,7 +38,33 @@ Ensure you have the following software installed on your system:
    python scripts/fake_data.py
    ```
 
+4. Setup dremio with data source:
+   Please follow the article: https://www.dremio.com/blog/intro-to-dremio-nessie-and-apache-iceberg-on-your-laptop/
+
+5. Create data folder in nessie:
+   ![alt text](images/image.png)
+
+
 ## Running dbt on Dremio
+1. Create profiles.yml
+   ```
+   dremio_demo:
+      outputs:
+            dev:
+            dremio_space: <space_name>
+            dremio_space_folder: <space_folder>
+            object_storage_path: <nessie_folder>
+            object_storage_source: Nessie
+            password: <dremio_password>
+            port: 9047
+            software_host: 127.0.0.1
+            threads: 1
+            type: dremio
+            use_ssl: false
+            user: <dremio_username>
+      target: dev
+   ```
+
 1. Load data into data source
    ```bash
    dbt seed
