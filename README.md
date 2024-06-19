@@ -1,4 +1,4 @@
-### Overview
+## Overview
 This guide provides instructions for running dbt (Data Build Tool) on Dremio
 
 ## Table of Contents
